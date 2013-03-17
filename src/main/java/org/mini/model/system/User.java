@@ -37,9 +37,9 @@ public class User extends IdEntity implements Serializable {
 	@Column(name = "password")
 	private String password;
 	
-	@Column(name = "valid_flag")
+	@Column(name = "del_flag")
 	@Type(type = "true_false")
-	private boolean validFlag;
+	private boolean deleted;
 
 	@Column(name = "create_time")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -89,19 +89,19 @@ public class User extends IdEntity implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	/**
-	 * @return the validFlag
+	 * @return the deleted
 	 */
-	public boolean isValidFlag() {
-		return validFlag;
+	public boolean isDeleted() {
+		return deleted;
 	}
 
 	/**
-	 * @param validFlag the validFlag to set
+	 * @param deleted the deleted to set
 	 */
-	public void setValidFlag(boolean validFlag) {
-		this.validFlag = validFlag;
+	public void setDeleted(boolean deleted) {
+		this.deleted = deleted;
 	}
 
 	/**
