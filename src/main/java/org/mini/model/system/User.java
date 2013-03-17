@@ -12,7 +12,6 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import org.hibernate.annotations.Type;
 import org.mini.model.IdEntity;
 
 /**
@@ -38,7 +37,6 @@ public class User extends IdEntity implements Serializable {
 	private String password;
 	
 	@Column(name = "del_flag")
-	@Type(type = "true_false")
 	private boolean deleted;
 
 	@Column(name = "create_time")
