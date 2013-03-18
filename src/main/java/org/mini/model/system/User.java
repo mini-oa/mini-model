@@ -36,6 +36,9 @@ public class User extends IdEntity implements Serializable {
 	@Column(name = "password")
 	private String password;
 	
+	@Column(name = "valid_flag")
+	private boolean valid;
+	
 	@Column(name = "del_flag")
 	private boolean deleted;
 
@@ -86,6 +89,20 @@ public class User extends IdEntity implements Serializable {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	/**
+	 * @return the valid
+	 */
+	public boolean isValid() {
+		return valid;
+	}
+
+	/**
+	 * @param valid the valid to set
+	 */
+	public void setValid(boolean valid) {
+		this.valid = valid;
 	}
 
 	/**
